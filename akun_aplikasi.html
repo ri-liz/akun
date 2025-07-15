@@ -1,22 +1,36 @@
-[
-  { "id": 1, "nama": "Andi Prasetyo", "email": "andi1@example.com", "usia": 25, "password": "Andi"},
-  { "id": 2, "nama": "Budi Santoso", "email": "budi2@example.com", "usia": 30, "password": "Budi"},
-  { "id": 3, "nama": "Citra Ayu", "email": "citra3@example.com", "usia": 28, "password": "Citra"},
-  { "id": 4, "nama": "Dedi Firmansyah", "email": "dedi4@example.com", "usia": 32, "password": "Dedi"},
-  { "id": 5, "nama": "Eka Putri", "email": "eka5@example.com", "usia": 24, "password": "Eka"},
-  { "id": 6, "nama": "Fajar Nugroho", "email": "fajar6@example.com", "usia": 29, "password": "Fajar"},
-  { "id": 7, "nama": "Gita Larasati", "email": "gita7@example.com", "usia": 26, "password": "Gita"},
-  { "id": 8, "nama": "Hendra Wijaya", "email": "hendra8@example.com", "usia": 31, "password": "Hendra"},
-  { "id": 9, "nama": "Indah Sari", "email": "indah9@example.com", "usia": 27, "password": "Indah"},
-  { "id": 10, "nama": "Joko Susanto", "email": "joko10@example.com", "usia": 35, "password": "Joko"},
-  { "id": 11, "nama": "Kiki Saputra", "email": "kiki11@example.com", "usia": 23, "password": "Kiki"},
-  { "id": 12, "nama": "Lina Permata", "email": "lina12@example.com", "usia": 30, "password": "Lina"},
-  { "id": 13, "nama": "Made Surya", "email": "made13@example.com", "usia": 27, "password": "Made"},
-  { "id": 14, "nama": "Nina Wijanarko", "email": "nina14@example.com", "usia": 33, "password": "Nina"},
-  { "id": 15, "nama": "Oscar Gunawan", "email": "oscar15@example.com", "usia": 22, "password": "Oscar"},
-  { "id": 16, "nama": "Putri Kartika", "email": "putri16@example.com", "usia": 24, "password": "Putri"},
-  { "id": 17, "nama": "Rizki Mahendra", "email": "rizki17@example.com", "usia": 26, "password": "Rizki"},
-  { "id": 18, "nama": "Sinta Dewi", "email": "sinta18@example.com", "usia": 31, "password": "Sinta"},
-  { "id": 19, "nama": "Tono Rahmat", "email": "tono19@example.com", "usia": 28, "password": "Tono"},
-  { "id": 20, "nama": "Utami Wulandari", "email": "utami20@example.com", "usia": 29, "password":"Utami"}
-]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="json-output"></pre>
+    <script>
+        const dataPengguna = [
+            { "id": 1, "nama": "Andi Prasetyo", "email": "andi1@example.com", "usia": 25, "password": "Andi"},
+            { "id": 2, "nama": "Budi Santoso", "email": "budi2@example.com", "usia": 30, "password": "Budi"},
+            { "id": 3, "nama": "Citra Ayu", "email": "citra3@example.com", "usia": 28, "password": "Citra"},
+            { "id": 4, "nama": "Dedi Firmansyah", "email": "dedi4@example.com", "usia": 32, "password": "Dedi"},
+            { "id": 5, "nama": "Eka Putri", "email": "eka5@example.com", "usia": 24, "password": "Eka"},
+            { "id": 6, "nama": "Fajar Nugroho", "email": "fajar6@example.com", "usia": 29, "password": "Fajar"},
+            { "id": 7, "nama": "Gita Larasati", "email": "gita7@example.com", "usia": 26, "password": "Gita"},
+            { "id": 8, "nama": "Hendra Wijaya", "email": "hendra8@example.com", "usia": 31, "password": "Hendra"},
+            { "id": 9, "nama": "Indah Sari", "email": "indah9@example.com", "usia": 27, "password": "Indah"},
+            { "id": 10, "nama": "Joko Susanto", "email": "joko10@example.com", "usia": 35, "password": "Joko"},
+            { "id": 11, "nama": "Kiki Saputra", "email": "kiki11@example.com", "usia": 23, "password": "Kiki"},
+            { "id": 12, "nama": "Lina Permata", "email": "lina12@example.com", "usia": 30, "password": "Lina"},
+            { "id": 13, "nama": "Made Surya", "email": "made13@example.com", "usia": 27, "password": "Made"},
+            { "id": 14, "nama": "Nina Wijanarko", "email": "nina14@example.com", "usia": 33, "password": "Nina"},
+            { "id": 15, "nama": "Oscar Gunawan", "email": "oscar15@example.com", "usia": 22, "password": "Oscar"},
+            { "id": 16, "nama": "Putri Kartika", "email": "putri16@example.com", "usia": 24, "password": "Putri"},
+            { "id": 17, "nama": "Rizki Mahendra", "email": "rizki17@example.com", "usia": 26, "password": "Rizki"},
+            { "id": 18, "nama": "Sinta Dewi", "email": "sinta18@example.com", "usia": 31, "password": "Sinta"},
+            { "id": 19, "nama": "Tono Rahmat", "email": "tono19@example.com", "usia": 28, "password": "Tono"},
+            { "id": 20, "nama": "Utami Wulandari", "email": "utami20@example.com", "usia": 29, "password":"Utami"}
+        ];
+        document.getElementById("json-output").textContent = JSON.stringify(dataPengguna, null, 2);
+    </script>
+</body>
+</html>
